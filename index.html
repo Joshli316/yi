@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Yi 易 — 把难事变易 / Make Hard Things Easy</title>
+  <meta name="description" content="Yi 易 — 四个免费、双语、不收集数据的工具，为在美国念书的国际学生打造：报税（税易）、保险（保易）、工作授权（工易）、移民（路易）。Four free bilingual tools for international students in the US: taxes, insurance, work auth, immigration.">
+  <meta name="theme-color" content="#FAFAF7">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yi 易 — Make Hard Things Easy">
+  <meta property="og:description" content="Free bilingual tools for international students: taxes, insurance, work auth, immigration. 把难事变易。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://yi-suite.pages.dev/">
+  <meta property="og:image" content="https://yi-suite.pages.dev/public/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yi 易 — Make Hard Things Easy">
+  <meta name="twitter:description" content="Free bilingual tools for international students. 把难事变易。">
+  <meta name="twitter:image" content="https://yi-suite.pages.dev/public/og.png">
+
+  <link rel="canonical" href="https://yi-suite.pages.dev/">
+  <link rel="alternate" hreflang="zh-CN" href="https://yi-suite.pages.dev/">
+  <link rel="alternate" hreflang="en" href="https://yi-suite.pages.dev/">
+
+  <!-- Favicon: gold 易 glyph on off-white -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23FAFAF7'/><text x='32' y='49' text-anchor='middle' font-family='-apple-system,system-ui,sans-serif' font-size='48' font-weight='700' fill='%23C99A2E'>易</text></svg>">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dist/tailwind.css">
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:bg-[var(--color-gold)] focus:text-[var(--color-ink)] focus:px-4 focus:py-2" data-i18n="a11y_skip">跳到主内容</a>
+
+  <header class="site-header">
+    <div class="max-w-[1080px] mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="wordmark" aria-label="Yi 易 — home">
+        <span class="glyph">易</span>
+        <span class="word">Yi</span>
+      </a>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">中</button>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1 max-w-[1080px] mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32 w-full">
+
+    <!-- HERO -->
+    <section class="text-center">
+      <p class="eyebrow mb-8">A Family · 一个家族</p>
+
+      <h1 class="hero-glyph mb-2">易</h1>
+      <p class="hero-yi mb-10">Yi</p>
+
+      <hr class="gold-rule mb-10">
+
+      <p class="hero-tagline-cn mb-1" data-i18n="hero_tagline_cn">把难事变易</p>
+      <p class="hero-tagline-en mb-10" data-i18n="hero_tagline_en">Make hard things easy.</p>
+
+      <p class="text-lg md:text-xl text-soft leading-relaxed max-w-2xl mx-auto mb-10" data-i18n="hero_pitch">
+        四个免费、双语、不收集个人信息的工具——为在美国念书的国际学生打造。报税、保险、工作授权、移民。每一个都是你需要时翻开的那一本说明书。
+      </p>
+
+      <p class="eyebrow mb-8" data-i18n="hero_meta">免费 · 无登录 · 双语</p>
+
+      <a href="#apps-section" data-scroll-to="#apps-section" class="btn-ghost no-underline" data-i18n="hero_cta">看看四个工具 ↓</a>
+    </section>
+
+    <hr class="faint-rule mt-24">
+
+    <!-- APPS -->
+    <section id="apps-section" class="mt-20 md:mt-28">
+      <header class="text-center mb-14">
+        <p class="section-label mb-3" data-i18n="apps_label">工具 · The Tools</p>
+        <h2 class="font-display italic text-3xl md:text-4xl text-soft">Four tools, one family.</h2>
+      </header>
+      <div id="apps"></div>
+    </section>
+
+    <hr class="faint-rule mt-24">
+
+    <!-- WHY YI — asymmetric editorial spread (the "one asymmetric break") -->
+    <section class="mt-20 md:mt-28">
+      <header class="mb-12 text-center">
+        <p class="section-label mb-3" data-i18n="why_label">为什么是 Yi · Why Yi</p>
+      </header>
+      <div class="why-spread">
+        <div>
+          <h2 class="font-cn text-3xl md:text-4xl font-semibold leading-tight mb-4" data-i18n="why_h2">一个家族，四个工具</h2>
+        </div>
+        <div>
+          <p class="text-lg leading-relaxed text-soft mb-10" data-i18n="why_lede">
+            在美国念书有许多看不懂的系统——税法、保险、工作签证、移民排期。Yi 把每一个都拆成一个独立的小工具，免费、双语、不需要登录。你只要在需要的那一刻打开对应的那一本就好。
+          </p>
+          <div class="why-tile-grid">
+            <div class="why-tile">
+              <h3 data-i18n="why_p1_h">为留学生打造</h3>
+              <p data-i18n="why_p1_b">每个工具都默认非美国公民、F-1/J-1 身份、对美国体制不熟。例子用的是「我」不是「你应该」。</p>
+            </div>
+            <div class="why-tile">
+              <h3 data-i18n="why_p2_h">不存任何数据</h3>
+              <p data-i18n="why_p2_b">所有计算都在浏览器里跑。没有账号、没有 Cookie、没有分析脚本。关掉网页，数据就消失。</p>
+            </div>
+            <div class="why-tile">
+              <h3 data-i18n="why_p3_h">不是法律建议</h3>
+              <p data-i18n="why_p3_b">我们解释、计算、对比、生成检查清单。重大决定请咨询持证的会计师 / 律师 / DSO。</p>
+            </div>
+            <div class="why-tile">
+              <h3 data-i18n="why_p4_h">一个人做的</h3>
+              <p data-i18n="why_p4_b">用 Claude Code 一个人做出来的。如果发现错误或想要新功能，欢迎 GitHub 提 issue。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="faint-rule mt-24">
+
+    <!-- FAQ -->
+    <section class="mt-20 md:mt-28">
+      <header class="max-w-2xl mb-12">
+        <p class="section-label mb-3" data-i18n="faq_label">常见问题 · FAQ</p>
+        <h2 class="font-cn text-3xl md:text-4xl font-semibold">常见问题</h2>
+      </header>
+      <ol class="faq-list max-w-2xl space-y-9">
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">01</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q1">为什么叫「易」？</h3>
+            <p data-i18n="faq_a1">「易」在中文里既是「容易」，也是变化、流动的意思。这四个工具想做的就是把复杂、令人焦虑的系统变得简单一点。</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">02</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q2">我必须四个都用吗？</h3>
+            <p data-i18n="faq_a2">不必。每个工具都是独立的——按需取用。多数人在不同人生阶段会陆续用到不同的工具。</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">03</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q3">这些是法律 / 税务 / 医疗建议吗？</h3>
+            <p data-i18n="faq_a3">不是。这些工具帮你理解规则、做计算、生成检查清单。重要决定请咨询持牌专业人士（CPA、律师、医生、DSO）。</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">04</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q4">我的数据会被存吗？</h3>
+            <p data-i18n="faq_a4">不会。所有计算都在你的浏览器本地跑——没有服务器、没有账号、没有 Cookie、没有分析脚本。关掉标签页，数据就清空。</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">05</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q5">为什么免费？</h3>
+            <p data-i18n="faq_a5">因为这本来就该免费。市面上的同类工具多数是把基础信息收费打包卖给最焦虑的那群人。Yi 的目标是让你不需要付钱也能搞清楚自己的处境。</p>
+          </div>
+        </li>
+        <li class="faq-item">
+          <span class="faq-num" aria-hidden="true">06</span>
+          <div class="faq-body">
+            <h3 data-i18n="faq_q6">这是谁做的？</h3>
+            <p data-i18n="faq_a6">一个用 Claude Code 自己学编程的留学生。这四个工具都是我做的——这个 hub 把它们串成一个家族。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="border-t border-[var(--color-rule)] mt-12">
+    <div class="max-w-[1080px] mx-auto px-6 py-8 flex flex-wrap items-center justify-between gap-4 text-sm font-mono text-soft">
+      <p>
+        <span data-i18n="footer_built">用 Claude Code 搭建</span>
+        · <span>2026</span>
+      </p>
+      <p>
+        <a href="https://github.com/Joshli316/yi" target="_blank" rel="noopener" class="underline hover:text-[var(--color-gold)]" data-i18n="footer_github">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

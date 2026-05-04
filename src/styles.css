@@ -1,0 +1,384 @@
+@import "tailwindcss";
+
+/* =====================================================
+   Yi 易 — "Clean & helpful" vibe
+   Off-white + ink + warm gold accent.
+   Designed not to clash with any of the 4 sibling apps'
+   distinct palettes (green/navy/blue/teal).
+   ===================================================== */
+
+@theme {
+  --color-bg: #FAFAF7;
+  --color-paper: #F4F1E9;
+  --color-ink: #1A1A1A;
+  --color-ink-soft: #4A4A4A;
+  --color-ink-muted: #7A7A7A;
+  --color-gold: #C99A2E;
+  --color-gold-soft: #E5C66A;
+  --color-rule: #E8E4DA;
+
+  --font-sans: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-cn: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Cormorant Garamond", "Noto Serif SC", Georgia, serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+:root {
+  --bg: var(--color-bg);
+  --ink: var(--color-ink);
+  --accent: var(--color-gold);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 17px;        /* readable body, per UI memory: monospace reads small but sans-serif at 17px is right */
+  line-height: 1.65;
+}
+
+.font-cn { font-family: var(--font-cn); }
+.font-en, .font-display { font-family: var(--font-display); }
+.font-mono, code, kbd, samp { font-family: var(--font-mono); }
+.text-soft { color: var(--color-ink-soft); }
+.text-muted { color: var(--color-ink-muted); }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--color-rule);
+  background: var(--bg);
+}
+
+/* "Yi 易" wordmark */
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.wordmark .glyph {
+  font-family: var(--font-cn);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+.wordmark .word {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+/* Language toggle pill */
+.lang-toggle {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--ink);
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 0.75rem;
+  border-radius: 9999px;
+  transition: background 120ms ease, color 120ms ease, transform 80ms ease;
+}
+.lang-toggle:hover { background: var(--ink); color: var(--color-bg); }
+.lang-toggle:active { transform: translateY(1px); }
+
+/* Hero */
+.hero-glyph {
+  font-family: var(--font-cn);
+  font-weight: 700;
+  font-size: clamp(8rem, 22vw, 14rem);
+  line-height: 1;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+.hero-yi {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  color: var(--color-ink-soft);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.hero-tagline-cn {
+  font-family: var(--font-cn);
+  font-size: clamp(1.625rem, 3.5vw, 2.375rem);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.hero-tagline-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.375rem, 2.8vw, 2rem);
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+/* Eyebrow / mono labels */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+/* Sharp gold rule under hero — the "one sharp element" anchor */
+.gold-rule {
+  border: 0;
+  height: 2px;
+  background: var(--color-gold);
+  width: 64px;
+  margin: 0 auto;
+}
+.faint-rule {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  height: 0;
+}
+
+/* App card grid: 4 in a 2x2 grid on desktop */
+.apps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .apps-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+/* Card */
+.card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-rule);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  box-shadow: 0 1px 0 rgba(26,26,26,0.02);
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gold-soft);
+  box-shadow: 0 12px 28px -16px rgba(26,26,26,0.18);
+}
+
+.card-thumb-link { display: block; }
+.card-thumb-link:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-gold);
+}
+
+.card-title {
+  font-family: var(--font-cn);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+.card-title .font-en {
+  font-size: 1.5rem;
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+.card-blurb {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+.card-when {
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+}
+
+/* Thumbnail aspect 16:9 */
+.thumb-frame {
+  aspect-ratio: 16 / 9;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+.thumb-frame .thumb-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-paper),
+    var(--color-paper) 10px,
+    var(--color-bg) 10px,
+    var(--color-bg) 20px
+  );
+}
+.thumb-frame img {
+  position: relative;
+  z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Buttons */
+.btn-gold {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  background: var(--ink);
+  color: var(--color-bg);
+  padding: 0.65rem 1.1rem;
+  min-height: 40px;
+  border-radius: 9999px;
+  border: 1px solid var(--ink);
+  transition: background 120ms ease, color 120ms ease, transform 80ms ease, border-color 120ms ease;
+  text-decoration: none;
+}
+.btn-gold:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--ink);
+}
+.btn-gold:active { transform: translateY(1px); }
+
+.btn-ghost {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  background: transparent;
+  color: var(--ink);
+  padding: 0.65rem 1.1rem;
+  min-height: 40px;
+  border-radius: 9999px;
+  border: 1px solid var(--ink);
+  transition: background 120ms ease, color 120ms ease, transform 80ms ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-ghost:hover { background: var(--ink); color: var(--color-bg); }
+.btn-ghost:active { transform: translateY(1px); }
+
+/* Why-Yi: editorial spread (the asymmetric break) */
+.why-spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .why-spread {
+    /* Asymmetric: heading column narrow, body column wider, offset right */
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+  }
+}
+.why-tile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+@media (min-width: 640px) {
+  .why-tile-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.why-tile h3 {
+  font-family: var(--font-cn);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+.why-tile p {
+  font-size: 0.95rem;
+  color: var(--color-ink-soft);
+  line-height: 1.55;
+}
+
+/* FAQ — left-aligned editorial list with mono numbered counters */
+.faq-list { list-style: none; padding: 0; margin: 0; }
+.faq-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  column-gap: 1.5rem;
+  align-items: baseline;
+}
+.faq-num {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-gold);
+  font-variant-numeric: tabular-nums;
+}
+.faq-body { min-width: 0; }
+.faq-body h3 {
+  font-family: var(--font-cn);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+.faq-body p {
+  font-size: 1rem;
+  color: var(--color-ink-soft);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .faq-item { grid-template-columns: 2.25rem 1fr; column-gap: 1rem; }
+  .faq-num { font-size: 1rem; }
+}
+
+/* Section labels */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+}
+
+/* Smooth fade for language swap */
+[data-i18n] { transition: opacity 100ms ease; }
+
+/* Focus ring — keyboard users only */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .card, .lang-toggle, .btn-gold, .btn-ghost, [data-i18n] {
+    transition: none !important;
+  }
+  .card:hover { transform: none; }
+}

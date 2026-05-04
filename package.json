@@ -1,0 +1,20 @@
+{
+  "name": "yi",
+  "version": "0.1.0",
+  "description": "Yi 易 — Make hard things easy. Hub for 4 free bilingual tools for international students in the US.",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i src/styles.css -o dist/tailwind.css --minify",
+    "dev:css": "tailwindcss -i src/styles.css -o dist/tailwind.css --watch",
+    "build": "npm run build:css",
+    "dev": "npm run dev:css",
+    "snap": "node scripts/snap-thumbs.mjs",
+    "og": "node scripts/snap-og.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2",
+    "playwright": "^1.50.0"
+  }
+}
