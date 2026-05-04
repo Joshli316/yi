@@ -5,7 +5,7 @@
 // ============================================
 
 import { YI_APPS } from './content.js';
-import { getLang, t } from './i18n.js';
+import { getLang } from './i18n.js';
 
 const escapeHtml = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')

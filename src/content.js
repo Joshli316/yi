@@ -57,7 +57,3 @@ export const YI_APPS = [
     thumb: 'public/thumbs/luyi.jpg',
   },
 ];
-
-export function findApp(id) {
-  return YI_APPS.find((a) => a.id === id);
-}
