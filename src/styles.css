@@ -351,6 +351,21 @@ body {
   .faq-num { font-size: 1rem; }
 }
 
+/* Lang-aware heading: italic display serif for EN, sans semibold for CN.
+   Keeps the editorial italic feel for English while rendering Chinese
+   in a typeface that actually has CN glyphs. */
+html[lang="zh-CN"] #apps-heading {
+  font-family: var(--font-cn);
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+html[lang="en"] #apps-heading {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
 /* Section labels */
 .section-label {
   font-family: var(--font-mono);

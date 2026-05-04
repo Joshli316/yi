@@ -1,0 +1,15 @@
+node_modules/
+scripts/
+_dev-screens/
+.wrangler/
+.git/
+.github/
+.gitignore
+.assetsignore
+README.md
+CLAUDE.md
+package.json
+package-lock.json
+src/styles.css
+.DS_Store
+*.log

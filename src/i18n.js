@@ -8,11 +8,8 @@ const LS_KEY = 'yi:lang';
 let currentLang = 'zh';
 
 const STRINGS = {
-  // Hero — "Yi 易" stays bilingual-fixed (zine treatment)
-  hero_glyph: { zh: '易', en: '易' },
-  hero_yi: { zh: 'Yi', en: 'Yi' },
-  hero_tagline_cn: { zh: '把难事变易', en: '把难事变易' },
-  hero_tagline_en: { zh: 'Make hard things easy.', en: 'Make hard things easy.' },
+  // Hero pitch + meta swap; the "易 Yi" wordmark and "把难事变易 / Make hard
+  // things easy." taglines are zine-stable (rendered inline in HTML).
   hero_pitch: {
     zh: '四个免费、双语、不收集个人信息的工具——为在美国念书的国际学生打造。报税、保险、工作授权、移民。每一个都是你需要时翻开的那一本说明书。',
     en: 'Four free, bilingual, no-tracking tools for international students in the US. Taxes, insurance, work authorization, immigration. Each one is the manual you reach for when you actually need it.',
@@ -22,6 +19,7 @@ const STRINGS = {
 
   // Section labels
   apps_label: { zh: '工具 · The Tools', en: 'The Tools · 工具' },
+  apps_heading: { zh: '四个工具，一个家族。', en: 'Four tools, one family.' },
   why_label: { zh: '为什么是 Yi · Why Yi', en: 'Why Yi · 为什么是 Yi' },
   faq_label: { zh: '常见问题 · FAQ', en: 'FAQ · 常见问题' },
 
@@ -90,7 +88,6 @@ const STRINGS = {
 
   // Footer
   footer_built: { zh: '用 Claude Code 搭建', en: 'Built with Claude Code' },
-  footer_github: { zh: 'GitHub', en: 'GitHub' },
 
   // a11y
   a11y_skip: { zh: '跳到主内容', en: 'Skip to main content' },
