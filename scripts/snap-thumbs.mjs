@@ -17,10 +17,10 @@ const OUT = resolve(ROOT, 'public/thumbs');
 // JPEG for screenshot-y pages with photos/gradients (smaller),
 // PNG for pages dominated by flat colors / sharp text where PNG wins.
 const TARGETS = [
-  { id: 'shuiyi', url: 'https://shuiyi.pages.dev/',     format: 'jpeg' },
+  { id: 'shuiyi', url: 'https://shuiyi-5j5.pages.dev/', format: 'jpeg' },
   { id: 'baoyi',  url: 'https://baoyi.pages.dev/',      format: 'jpeg' },
   { id: 'gongyi', url: 'https://gongyi-opt.pages.dev/', format: 'jpeg' },
-  { id: 'luyi',   url: 'https://luyi.pages.dev/',       format: 'jpeg' },
+  { id: 'luyi',   url: 'https://luyi-3re.pages.dev/',   format: 'jpeg' },
 ];
 
 const VIEWPORT = { width: 1600, height: 900 };

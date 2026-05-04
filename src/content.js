@@ -14,7 +14,7 @@ export const YI_APPS = [
     blurbEn: 'NRA/RA status, Form 8843, treaty benefits, FICA refunds.',
     useWhenZh: '报税季 · 第一次报税 · 搞不清协定',
     useWhenEn: 'Tax season · First-time filer · Treaty confusion',
-    url: 'https://shuiyi.pages.dev/',
+    url: 'https://shuiyi-5j5.pages.dev/',
     thumb: 'public/thumbs/shuiyi.jpg',
   },
   {
@@ -53,7 +53,7 @@ export const YI_APPS = [
     blurbEn: 'H-1B lottery odds, O-1 self-assessment, EB comparison, green-card backlog.',
     useWhenZh: 'OPT 之后 · H-1B 没中 · 长期规划',
     useWhenEn: 'After OPT · H-1B miss · Long-term planning',
-    url: 'https://luyi.pages.dev/',
+    url: 'https://luyi-3re.pages.dev/',
     thumb: 'public/thumbs/luyi.jpg',
   },
 ];

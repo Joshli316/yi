@@ -2,10 +2,10 @@
 
 Free, bilingual hub for four utility apps for international students in the US:
 
-- **税易 ShuiYi** — Tax Made Easy → [shuiyi.pages.dev](https://shuiyi.pages.dev/)
+- **税易 ShuiYi** — Tax Made Easy → [shuiyi-5j5.pages.dev](https://shuiyi-5j5.pages.dev/)
 - **保易 BaoYi** — Insurance Made Easy → [baoyi.pages.dev](https://baoyi.pages.dev/)
 - **工易 GongYi** — Work Auth Made Easy → [gongyi-opt.pages.dev](https://gongyi-opt.pages.dev/)
-- **路易 LuYi** — Path Made Easy → [luyi.pages.dev](https://luyi.pages.dev/)
+- **路易 LuYi** — Path Made Easy → [luyi-3re.pages.dev](https://luyi-3re.pages.dev/)
 
 Live: https://yi-1ot.pages.dev/
 
