@@ -62,7 +62,7 @@ for (let i = 0; i < APPS.length; i++) {
     await page.screenshot({ path: resolve(OUT, `backlink-${app.id}.png`), clip: { x: 0, y: 0, width: 1280, height: 120 } });
     // Confirm chip exists by querying the DOM
     const chipFound = await page.evaluate(() => {
-      const links = Array.from(document.querySelectorAll('a[href*="yi-suite.pages.dev"]'));
+      const links = Array.from(document.querySelectorAll('a[href*="yi-1ot.pages.dev"], a[href*="yi-suite.pages.dev"]'));
       return links.length > 0 ? links[0].textContent.trim().replace(/\s+/g, ' ') : null;
     });
     const status = chipFound ? `✓ chip: "${chipFound}"` : `✗ chip MISSING`;

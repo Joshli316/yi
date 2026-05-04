@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yi-suite.pages.dev/sitemap.xml
+Sitemap: https://yi-1ot.pages.dev/sitemap.xml

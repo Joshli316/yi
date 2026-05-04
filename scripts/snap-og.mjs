@@ -45,7 +45,7 @@ body{
   </div>
   <div class="row">
     <span>4 Tools · 4 个工具</span>
-    <span class="pill">yi-suite.pages.dev</span>
+    <span class="pill">yi-1ot.pages.dev</span>
   </div>
 </body></html>`;
 

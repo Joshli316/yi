@@ -7,7 +7,7 @@ Free, bilingual hub for four utility apps for international students in the US:
 - **工易 GongYi** — Work Auth Made Easy → [gongyi-opt.pages.dev](https://gongyi-opt.pages.dev/)
 - **路易 LuYi** — Path Made Easy → [luyi.pages.dev](https://luyi.pages.dev/)
 
-Live: https://yi-suite.pages.dev/
+Live: https://yi-1ot.pages.dev/
 
 ## Local
 

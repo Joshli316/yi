@@ -7,7 +7,7 @@ Free, bilingual hub for the four 易 utility apps for international students in 
 - Tailwind CSS v4 via `@tailwindcss/cli` → `dist/tailwind.css`
 - localStorage for language pref (`yi:lang`)
 - Playwright for build-time thumbnail capture (not runtime)
-- Cloudflare Pages, project name `yi-suite` (yi.pages.dev may be taken; verify before deploy)
+- Cloudflare Pages, project name `yi`. Live at https://yi-1ot.pages.dev/ (CF auto-suffixed because yi.pages.dev was already taken)
 
 ## Structure
 ```
@@ -53,7 +53,7 @@ npm run og                            # regenerate OG card
 ## Deployment
 ```bash
 npm run build:css                     # ensure dist/tailwind.css is fresh
-wrangler pages deploy . --project-name=yi-suite
+wrangler pages deploy . --project-name=yi
 ```
 After first push: `git remote set-head origin --auto`.
 
